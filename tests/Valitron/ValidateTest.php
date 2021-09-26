@@ -2266,6 +2266,13 @@ class ValidateTest extends BaseTestCase
         $this->assertTrue($v->validate());
     }
 
+    /*public function testRequiredWithSubfieldsArrayStringValue()
+    {
+        $v = new Validator(array('subfields' => array('username' => 'tester')));
+        $v->rule('requiredWith', 'subfields.username', 'subfields.password');
+        $this->assertFalse($v->validate());
+    }*/
+
     public function testRequiredWithValidNoParams()
     {
         $v = new Validator(array());
